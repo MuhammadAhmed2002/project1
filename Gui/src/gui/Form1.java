@@ -33,11 +33,16 @@ public class Form1 extends javax.swing.JFrame {
         jDialog2 = new javax.swing.JDialog();
         jDialog3 = new javax.swing.JDialog();
         label1 = new java.awt.Label();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
         jButton1 = new javax.swing.JButton();
         nameTextField = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         programComoBox = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
 
         javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
         jDialog1.getContentPane().setLayout(jDialog1Layout);
@@ -74,6 +79,13 @@ public class Form1 extends javax.swing.JFrame {
 
         label1.setText("label1");
 
+        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(jList1);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jButton1.setBackground(new java.awt.Color(51, 51, 255));
@@ -100,6 +112,14 @@ public class Form1 extends javax.swing.JFrame {
         });
 
         jLabel3.setText("Program");
+
+        jMenu1.setText("File");
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Edit");
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -133,7 +153,7 @@ public class Form1 extends javax.swing.JFrame {
                     .addComponent(jLabel3))
                 .addGap(45, 45, 45)
                 .addComponent(jButton1)
-                .addContainerGap(85, Short.MAX_VALUE))
+                .addContainerGap(64, Short.MAX_VALUE))
         );
 
         pack();
@@ -198,6 +218,11 @@ public class Form1 extends javax.swing.JFrame {
     private javax.swing.JDialog jDialog3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JList<String> jList1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JScrollPane jScrollPane1;
     private java.awt.Label label1;
     private javax.swing.JTextField nameTextField;
     private javax.swing.JComboBox<String> programComoBox;
